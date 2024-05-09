@@ -1,0 +1,19 @@
+
+/* Estilos para el cuerpo de la página */
+body {
+    font-family: sans-serif; /* Utiliza una fuente sans-serif para el texto */
+    text-align: center; /* Centra el contenido del cuerpo */
+}
+
+/* Estilos para el párrafo de resultado */
+#result {
+    font-size: 24px; /* Tamaño de fuente grande */
+    font-weight: bold; /* Texto en negrita */
+    color: #00698f; /* Color del texto en azul oscuro */
+}
+
+/* Estilos para el encabezado principal */
+h1 {
+    font-family: "Jersey 10 Charted", sans-serif; /* Utiliza una fuente personalizada con respaldo sans-serif */
+}
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Establece la codificación de caracteres y la vista para dispositivos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Enlaza la hoja de estilos externa -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: cadetblue;">
+    <!-- Define la estructura del cuerpo del documento -->
+    <div class="CONTAINER">
+        <div class="ROW">
+            <!-- Columna vacía para alinear contenido -->
+            <div class="col"></div>
+            <!-- Columna principal con contenido -->
+            <div class="col" style="margin-top: 70px;">
+                <!-- Encabezado principal -->
+                <h1>NUMEROS PRIMIOS</h1>
+                <!-- Texto de instrucción para el usuario -->
+                <p>Ingresa un numero:</p>
+                <!-- Campo de entrada para que el usuario ingrese un número -->
+                <input type="number" id="userGuess" />
+                <!-- Botón para enviar el número ingresado -->
+                <button id="submitGuess">checar numero</button>
+                <!-- Párrafo para mostrar el resultado -->
+                <p id="result"></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+  // Obtiene elementos del DOM por su ID
+  const userGuessInput = document.getElementById("userGuess");
+  const submitButton = document.getElementById("submitGuess");
+  const resultParagraph = document.getElementById("result");
+  
+  // Agrega un evento de clic al botón de enviar
+  submitButton.addEventListener("click", () => {
+    // Obtiene el valor ingresado por el usuario y lo convierte a número
+    const userGuess = Number(userGuessInput.value);
+    // Verifica si el valor ingresado es un número válido
+    if (isNaN(userGuess)) {
+      // Si no es un número válido, muestra un mensaje de error
+      resultParagraph.textContent = "numero invalido!";
+    } else if (userGuess % 2 === 0) {
+      // Si el número ingresado es divisible por 2, muestra que no es primo
+      resultParagraph.textContent = `El NUMERO ${userGuess} NO ES PRIMO!`;
+    } else {
+      // Si el número ingresado no es divisible por 2, muestra que es primo
+      resultParagraph.textContent = `EL NUMERO ${userGuess} ES PRIMO!`;
+    }
+  });
+  </script>
+  
